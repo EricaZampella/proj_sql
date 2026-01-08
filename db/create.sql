@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS crm_sales (
     sls_due_dt INT,
     sls_sales INT,
     sls_quantity INT,
-    ls_price INT
+    sls_price INT
 );
 
 CREATE TABLE IF NOT EXISTS erp_cust (
