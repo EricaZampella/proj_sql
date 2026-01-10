@@ -41,7 +41,7 @@ INTO TABLE warehouse.crm_sales
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(@sls_ord_num, @sls_prd_key, @sls_cust_id, @sls_order_dt, @sls_ship_dt, @sls_due_dt, @sls_sales, @sls_quantity, @ls_price)
+(@sls_ord_num, @sls_prd_key, @sls_cust_id, @sls_order_dt, @sls_ship_dt, @sls_due_dt, @sls_sales, @sls_quantity, @sls_price)
 SET 
 	sls_ord_num = NULLIF(@sls_ord_num, ''),
     sls_prd_key = NULLIF(@sls_prd_key ,''),
@@ -51,7 +51,7 @@ SET
     sls_due_dt = NULLIF(@sls_due_dt ,''),
     sls_sales = NULLIF(@sls_sales ,''),
     sls_quantity = NULLIF(@sls_quantity ,''),
-    ls_price = NULLIF(@ls_price ,'');
+    sls_price = NULLIF(@sls_price ,'');
     
 /*File CUST_AZ12*/
 TRUNCATE TABLE erp_cust;
